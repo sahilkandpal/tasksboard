@@ -1,0 +1,53 @@
+.add-tasklist-btn {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px;
+  border-radius: 100% !important;
+  min-width: auto !important;
+  padding: 5px !important;
+  background-color: var(--main-color) !important;
+  &:hover {
+    background-color: var(--main-color);
+  }
+  span {
+    width: auto;
+    padding: 0;
+    color: #fff;
+    svg {
+      font-size: 45px;
+    }
+  }
+}
+.real-add-btn {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px;
+  border-radius: 100% !important;
+  min-width: auto !important;
+  padding: 5px !important;
+  background-color: var(--main-color) !important;
+  &:hover {
+    background-color: var(--main-color);
+  }
+  span {
+    width: auto;
+    padding: 0;
+    color: #fff;
+    svg {
+      font-size: 35px;
+    }
+  }
+}
+
+.options {
+  input {
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    color: var(--main-color);
+    font-size: 14px;
+    &::placeholder {
+      color: rgba(32, 68, 124, 0.5);
+    }
+  }
+}

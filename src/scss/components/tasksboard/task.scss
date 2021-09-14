@@ -1,0 +1,30 @@
+.task {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+  &-checkbox {
+    padding: 0 !important;
+    .checked-circle,
+    .unchecked-circle {
+      font-size: 40px;
+    }
+    .unchecked-circle {
+      color: var(--main-color);
+    }
+    .checked-circle {
+      color: rgb(14, 163, 14);
+    }
+  }
+  &-text {
+    padding-left: 15px;
+    padding-top: 5px;
+
+    &-name {
+      font-size: 14px;
+    }
+    &-description {
+      font-size: 12px;
+      padding-top: 10px;
+    }
+  }
+}

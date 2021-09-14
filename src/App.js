@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Route, Switch } from "react-router-dom";
+import Loginpage from "./pages/Loginpage";
+import Signuppage from "./pages/Signuppage";
+import { SignupContextProvider } from "./context/signupContext";
+import { AuthContextProvider } from "./context/authContext";
+import { TaskContextProvider } from "./context/taskContext";
+import ProtectedRoute from "./Route/ProtectedRoute";
+import Tasksboard from "./components/Tasksboard/Tasksboard";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <SignupContextProvider>
+          <AuthContextProvider>
+            <TaskContextProvider>
+              <ProtectedRoute exact path="/" component={Tasksboard} />
+            </TaskContextProvider>
+            <Route path="/signup" component={Signuppage} />
+            <Route path="/login" component={Loginpage} />
+          </AuthContextProvider>
+        </SignupContextProvider>
+      </Switch>
     </div>
   );
 }

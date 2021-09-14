@@ -1,0 +1,44 @@
+.tasklists {
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+
+  .tasklist {
+    min-height: 130px;
+    width: 290px;
+    border: 1.4px solid var(--main-color);
+    padding: 15px;
+    color: var(--main-color);
+    align-self: flex-start;
+    @media screen and (max-width: 600px) {
+      align-self: center;
+    }
+    &-heading-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-btn {
+      border-radius: 100%;
+      width: auto;
+      min-width: auto;
+      padding: 5px;
+      span {
+        width: auto;
+        padding: 0;
+        color: var(--main-color);
+        font-size: 25px;
+      }
+    }
+
+    .completed {
+      color: rgb(14, 163, 14);
+      margin-top: 20px;
+    }
+  }
+}

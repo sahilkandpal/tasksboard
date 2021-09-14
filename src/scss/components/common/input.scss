@@ -1,0 +1,58 @@
+form {
+  .custom-input {
+    position: relative;
+    margin-top: 40px;
+    input {
+      padding: 18px 25px;
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      border-radius: 0;
+      border: none;
+      color: #fff;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    input[id="username"] + fieldset {
+      padding: 0 150px;
+      @media screen and (max-width: 600px) {
+        padding: 0;
+      }
+    }
+    input[id="email"] + fieldset {
+      padding: 0 140px;
+      @media screen and (max-width: 600px) {
+        padding: 0;
+      }
+    }
+    input[id="password"] + fieldset {
+      padding: 0 150px;
+      @media screen and (max-width: 600px) {
+        padding: 0;
+      }
+    }
+
+    fieldset {
+      position: absolute;
+      top: -8px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border: 1px solid #fff;
+      // padding: 0 130px;
+      pointer-events: none;
+
+      span {
+        color: #fff;
+        font-size: 12px;
+        padding: 0 3px;
+        white-space: nowrap;
+        font-weight: 300;
+        background-color: var(--main-color);
+      }
+    }
+  }
+}
